@@ -41,7 +41,8 @@ void CooQua (double X; double Y )
 
 // Задача 3
 // Напишите программу, которая принимает на вход целое число из отрезка [10, 99] и показывает наибольшую цифру числа.
-void MaxNum (int num)
+//void MaxNum (int num)
+/* int num = 11;
 {
     if (num>=10 && num <=99)
     {
@@ -54,7 +55,29 @@ void MaxNum (int num)
             Console.WriteLine($"{num%10}");
         }
     }
-}
+} */
 
 
 // Задача 4
+// Напишите программу, которая на вход принимает натуральное число N, а на выходе показывает его цифры через запятую.
+int  num = 110;
+int a = num;
+int chet =0;
+int result =0;
+int step = 1;
+while (a>=1)
+{
+    chet +=1;
+    step *=10;
+    a /= 10;
+}
+for (int i = chet; i>=1; i --)
+{
+    result = (num%step/(step/10));
+    step /=10;
+    Console.Write($"{result}, ");
+}
+
+
+
+
